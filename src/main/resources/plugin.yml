@@ -3,7 +3,7 @@ version: '${project.version}'
 main: hedystia.core.ManagePlugins
 api-version: 1.19
 authors: [contact@zastinian.com]
-description: Announcement Plugin
+description: Plugin Manager
 website: hedystia.com
 commands:
   manage_plugins:

@@ -18,11 +18,11 @@ public final class ManagePlugins extends JavaPlugin {
         // Plugin startup logic
         getCommand("manage_plugins").setExecutor(new ManagePlugin());
         getCommand("manage_plugins").setTabCompleter(this);
-        mycmd.sendMessage("&bEl plugin ha sido iniciado");
+        mycmd.sendMessage("&bThe plugin has been started");
     }
 
     @Override
-    public void onDisable() { mycmd.sendMessage("&cEl plugin ha sido desactivado"); }
+    public void onDisable() { mycmd.sendMessage("&cThe plugin has been deactivated"); }
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
