@@ -9,5 +9,10 @@ commands:
   manage_plugins:
     description: Manage Plugins
     usage: /manage_plugins <option> <plugin>
+    permission: manage_plugins
     aliases:
       - mgplug
+permissions:
+      manage_plugins:
+        description: Wildcard permission
+        default: op

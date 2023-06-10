@@ -10,10 +10,15 @@ public class ManagePlugin implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (!sender.hasPermission("plugin.reload")) {
+            sender.sendMessage("§7〔§bManage§ePlugins§7〕§cYou do not have permission to use this command.op");
+            return true;
+        }
         if (args.length == 0 || args[0].length() == 0) {
-            sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug reload [PLUGIN] §7- reloads a plugin");
-            sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug load [PLUGIN] §7- loads a plugin");
-            sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug unload [PLUGIN] §7- unloads a plugin");
+            sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug list §7- list of plugins");
+            sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug reload <plugin> §7- reloads a plugin");
+            sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug load <plugin> §7- loads a plugin");
+            sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug unload <plugin> §7- unloads a plugin");
         } else {
             String subCommand = args[0];
             switch (subCommand) {
@@ -79,9 +84,10 @@ public class ManagePlugin implements CommandExecutor {
                     }
                     break;
                 default:
-                    sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug reload [PLUGIN] §7- reloads a plugin");
-                    sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug load [PLUGIN] §7- loads a plugin");
-                    sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug unload [PLUGIN] §7- unloads a plugin");
+                    sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug list §7- list of plugins");
+                    sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug reload <plugin> §7- reloads a plugin");
+                    sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug load <plugin> §7- loads a plugin");
+                    sender.sendMessage("§7〔§bManage§ePlugins§7〕§6/mgplug unload <plugin> §7- unloads a plugin");
                     break;
             }
         }
