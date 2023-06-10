@@ -1,0 +1,13 @@
+name: ManagePlugins
+version: '1.0-SNAPSHOT'
+main: hedystia.core.ManagePlugins
+api-version: 1.19
+authors: [contact@zastinian.com]
+description: Announcement Plugin
+website: hedystia.com
+commands:
+  manage_plugins:
+    description: Manage Plugins
+    usage: /manage_plugins <option> <plugin>
+    aliases:
+      - mgplug
