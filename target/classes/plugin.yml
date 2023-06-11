@@ -1,5 +1,5 @@
 name: ManagePlugins
-version: '1.0-SNAPSHOT'
+version: '1.2-SNAPSHOT'
 main: hedystia.core.ManagePlugins
 api-version: 1.19
 authors: [contact@zastinian.com]
@@ -9,5 +9,10 @@ commands:
   manage_plugins:
     description: Manage Plugins
     usage: /manage_plugins <option> <plugin>
+    permission: manage_plugins
     aliases:
       - mgplug
+permissions:
+      manage_plugins:
+        description: Wildcard permission
+        default: op

@@ -15,7 +15,6 @@ public final class ManagePlugins extends JavaPlugin {
     ConsoleCommandSender mycmd = Bukkit.getConsoleSender();
     @Override
     public void onEnable() {
-        // Plugin startup logic
         getCommand("manage_plugins").setExecutor(new ManagePlugin());
         getCommand("manage_plugins").setTabCompleter(this);
         mycmd.sendMessage("&bThe plugin has been started");
